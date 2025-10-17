@@ -1,97 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deminik Courses</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BackShot Songs</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; }
 
     body {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(Money.html) no-repeat center center/cover;
-      color: #f1f1f1;
-      text-align: center;
-      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: url('./Georgien.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+    }
+
+    body.missing-bg {
+      background: linear-gradient(90deg, #222, #444);
+    }
+
+    .link-column {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      gap: 25px;
+      align-items: flex-start;
     }
 
-    header {
-      color: #FFD700;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      text-shadow: 0 0 25px #FFD700;
-      margin-bottom: 40px;
+    .link-column.right {
+      align-items: flex-end;
     }
 
-    h2 {
-      color: #FFD700;
-      font-size: 2rem;
-      text-shadow: 0 0 15px #FFD700;
-      margin-bottom: 15px;
+    .big-link {
+      display: block;
+      font-size: 50px;
+      font-weight: 800;
+      padding: 20px 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      border: 6px solid white;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+      background: url('./anothergeorgien.png') center center / cover no-repeat;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, color 0.28s ease;
     }
 
-    p {
-      color: #ccc;
-      font-size: 1.2rem;
-      margin-bottom: 50px;
+    .big-link:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 60px rgba(255,215,0,0.8);
+      border-color: gold;
+      color: gold;
     }
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 900px;
+    .center-content {
+      text-align: center;
+      color: white;
     }
 
-    .btn {
-      width: 180px;
-      height: 80px;
-      border: none;
-      border-radius: 16px;
-      cursor: pointer;
-      font-size: 1.5rem;
-      font-weight: bold;
+    h1 {
+      font-size: 70px;
+      font-weight: 900;
+      text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(255,215,0,0.8);
+      margin-bottom: 30px;
+    }
+
+    video {
+      width: 600px;
+      max-width: 90%;
+      border: 8px solid white;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(255,255,255,0.7);
+    }
+
+    #cover-img {
+      display: none;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #dbg {
+      position: fixed;
+      left: 10px;
+      bottom: 10px;
+      font-size: 12px;
+      padding: 6px 8px;
+      background: rgba(0,0,0,0.45);
       color: #fff;
-      transition: transform 0.25s, box-shadow 0.4s;
-      text-shadow: 0 0 8px rgba(0,0,0,0.5);
+      border-radius: 6px;
+      backdrop-filter: blur(3px);
     }
-
-    .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
-    }
-
-    /* Button gradients/colors */
-    .btn:nth-child(1) { background: url(Purple.Background.html) no-repeat }
   </style>
 </head>
 <body>
-  <header>Welcome To 🇭🇷 Dominik's🪽 Website.</header>
-  <header>🇭🇷🇭🇷 we truly appreciate the guests 🇭🇷🇭🇷</header>
-
-  <h2>Please Read The Warnings.</h2>
-  <p>Dont Break Any Other Laws Rules! Or We Will Take Legal Action.</p>
-
-  <div class="buttons">
-    <a href="https://www.youtube.com/watch?v=6eYhNr53k4o&list=RD6eYhNr53k4o&start_radio=1" target="_blank"><button class="btn">€5</button></a>
-    <a href="https://www.youtube.com/watch?v=Q7N99EzNQrw&list=LL&index=102" target="_blank"><button class="btn">€10</button></a>
-    <a href="https://www.youtube.com/watch?v=xNRm4I6bjKw&list=RD6eYhNr53k4o&index=5" target="_blank"><button class="btn">€20</button></a>
-    <a href="https://www.youtube.com/watch?v=qnD1hwjR3WU&list=RD6eYhNr53k4o&index=9" target="_blank"><button class="btn">€30</button></a>
-    <a href="https://www.youtube.com/watch?v=8N1sKnMj5jo&list=RD6eYhNr53k4o&index=11" target="_blank"><button class="btn">€50</button></a>
-    <a href="https://www.youtube.com/watch?v=VHLew72AqV0&list=LL&index=6" target="_blank"><button class="btn">€100</button></a>
-    <a href="https://www.youtube.com/watch?v=DTPkn93EkmA&list=LL&index=21" target="_blank"><button class="btn">€150</button></a>
-    <a href="https://www.youtube.com/watch?v=PAS0KbXeXXE&list=RDGMEMHDXYb1_DDSgDsobPsOFxpA&index=2" target="_blank"><button class="btn">€200</button></a>
-    <a href="https://www.youtube.com/watch?v=4NRXx6U8ABQ&list=LL&index=3" target="_blank"><button class="btn">€300</button></a>
-    <a href="https://www.youtube.com/watch?v=myjEoDypUD8&list=LL&index=54" target="_blank"><button class="btn">€500</button></a>
+  <!-- LEFT SIDE -->
+  <div class="link-column left">
+    <a class="big-link" href="https://www.youtube.com/watch?v=6eYhNr53k4o&list=RD6eYhNr53k4o&start_radio=1" target="_blank">1.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=M4ZoCHID9GI&list=RD6eYhNr53k4o&index=7" target="_blank">2.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=w-q6oZGZ2Bo&list=LL&index=34" target="_blank">3.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=_NMxK6PZPew&list=RD_NMxK6PZPew&start_radio=1" target="_blank">4.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=WawXgDVUZX8&list=RDGMEMHDXYb1_DDSgDsobPsOFxpA&start_radio=1&rv=_NMxK6PZPew" target="_blank">5.Click Here</a>
   </div>
+
+  <!-- CENTER VIDEO + TITLE -->
+  <div class="center-content">
+    <h1>Welcome 🥴</h1>
+    <h4>Songs for Backshots</h4>
+<video controls autoplay loop muted>
+  <source src="EineFikkStunde.html.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="link-column right">
+    <a class="big-link" href="https://www.youtube.com/watch?v=xNRm4I6bjKw&list=LL&index=101" target="_blank">1.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=Xtf2mnnt2yc&list=RDXtf2mnnt2yc&start_radio=1" target="_blank">2.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=qq_aCp70jb0&list=RDqq_aCp70jb0&start_radio=1" target="_blank">3.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=kHYGTK-P8lI&list=RDkHYGTK-P8lI&start_radio=1" target="_blank">4.Click Here</a>
+    <a class="big-link" href="https://www.youtube.com/watch?v=evJ6gX1lp2o&list=RDevJ6gX1lp2o&start_radio=1" target="_blank">5.Click Here</a>
+  </div>
+
+  <img id="cover-img" src="Georgien.png.html" alt="background">
+  <div id="dbg">Debug: checking image...</div>
+
+  <script>
+    (function(){
+      const dbg = document.getElementById('dbg');
+      const url = './Georgien.png';
+      const img = new Image();
+      img.onload = () => {
+        dbg.textContent = 'Debug: Georgien.png loaded OK';
+        document.getElementById('cover-img').style.display = 'none';
+      };
+      img.onerror = () => {
+        dbg.textContent = 'Debug: Georgien.png NOT found or failed to load. Using fallback.';
+        document.body.classList.add('missing-bg');
+        const cover = document.getElementById('cover-img');
+        cover.style.display = 'block';
+        cover.style.zIndex = '-1';
+      };
+      img.src = url + '?_=' + Date.now();
+    })();
+  </script>
 </body>
 </html>
